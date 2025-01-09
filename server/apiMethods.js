@@ -34,6 +34,50 @@ async function getRecipeById(id) {
   }
 }
 // filterring by field
+async function getRecipeBy(fieldName, fieldValue) {
+  try {
+    if (!fieldName || !fieldValue)
+      throw new Error("field , fieldValue must not be null or undefined");
+    const requestOptions = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    const response = await fetch(
+      `${API_URL}/recipes?${fieldName}=${fieldValue}`,
+      requestOptions
+    );
+    const recipe = await response.json();
+    return recipe;
+  } catch (error) {
+    console.error(error.message);
+    return null;
+  }
+}
+
+// sorting by field in Ascending order
+async function getRecipesAndSortByAscendingOrder(fieldName) {
+  //TODO : add additional fieldNames
+  try {
+    if (!fieldName) throw new Error("fieldName must not be null or undefined");
+    const requestOptions = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    const response = await fetch(
+      `${API_URL}/recipes?_sort=${fieldName}`,
+      requestOptions
+    );
+    const recipes = await response.json();
+    return recipes;
+  } catch (error) {
+    console.error(error.message);
+    return null;
+  }
+}
 
 // sorting by field in Descending order
 async function getRecipesAndSortByDescendingOrder(fieldName) {
@@ -198,16 +242,4 @@ async function deleteRecipeById(id) {
 }
 //----------------------------------------------------------------
 
-export {
-  createRecipe,
-  deleteRecipeById,
-  getRecipeBy,
-  getRecipeById,
-  getRecipes,
-  getRecipesAndSortByAscendingOrder,
-  getRecipesAndSortByDescendingOrder,
-  getRecipesBetweenRange,
-  getRecipesByPageNumber,
-  getRecipesByTextQuery,
-  updateRecipeById,
 };
