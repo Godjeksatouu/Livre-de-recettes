@@ -1,16 +1,4 @@
-Json Server
 
-Definition
-
-- json server is an npm package that lets you create a fake Rest API with zero coding.
-
-- as a front end developer , you will constantly need mock data (fake data) to use to quickly prototype front end componenets.
-
-- that's where json web server comes into play, you can send asynchrounous fetch requests to create ,read, update and delete data stored in a .json file.
-
-- this is far simpler than creating a node + express + mongodb backend just to test a front-end prototype componenet.
-
-How to use it ?
 
 Fetching Data (GET Request)
 Querying a list of items
