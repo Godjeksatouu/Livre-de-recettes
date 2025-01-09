@@ -5,8 +5,6 @@
 ## **Livre de Recettes en Ligne**  
 A web app to explore, add, edit, and delete recipes effortlessly. Browse recipes by categories, view detailed pages, and contribute to the database with your own recipes.
 
-**[Live Preview](https://livre-de-recettes-en-ligne.vercel.app/)**  
-
 ---
 
 ## Features  
