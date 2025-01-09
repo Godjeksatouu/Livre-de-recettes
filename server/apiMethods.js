@@ -242,4 +242,16 @@ async function deleteRecipeById(id) {
 }
 //----------------------------------------------------------------
 
+export {
+  createRecipe,
+  deleteRecipeById,
+  getRecipeBy,
+  getRecipeById,
+  getRecipes,
+  getRecipesAndSortByAscendingOrder,
+  getRecipesAndSortByDescendingOrder,
+  getRecipesBetweenRange,
+  getRecipesByPageNumber,
+  getRecipesByTextQuery,
+  updateRecipeById,
 };
