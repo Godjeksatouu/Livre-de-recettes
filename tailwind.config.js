@@ -1,3 +1,5 @@
+
+/** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.jsx"],
   theme: {
@@ -31,5 +33,11 @@ export default {
         "hero-image": "url('./src/assets/images/1.jpg')",
       },
     },
-
+  },
+  plugins: [
+    function ({ addVariant }) {
+      addVariant("child", "& > *");
+      addVariant("child-hover", "& > *:hover");
+    },
+  ],
 };
