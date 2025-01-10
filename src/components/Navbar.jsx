@@ -7,9 +7,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  function toggleMenu() {
-    setIsOpen((prev) => !prev);
-  }
+
 
   return (
     <div className=" bg-customGreen relative ">
