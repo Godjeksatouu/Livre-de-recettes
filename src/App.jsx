@@ -1,6 +1,7 @@
 import Layout from "./layout/Layout";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import GoToTheTop from "./components/GoToTheTop";
 
 
 function App() {
